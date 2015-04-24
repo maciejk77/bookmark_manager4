@@ -1,4 +1,6 @@
+
 require 'data_mapper'
+require 'sinatra'
 
 env = ENV['RACK_ENV'] || 'development'
 
@@ -10,3 +12,5 @@ DataMapper.finalize
 
 DataMapper.auto_upgrade!
 
+class BookmarkManager < Sinatra::Base
+end
